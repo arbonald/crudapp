@@ -1,0 +1,24 @@
+<ion-view view-title="Editor de contactos">
+      <ion-nav-buttons side="right" class="has-header">
+            <a class="button button-icon icon ion-android-home" href="/#/home">
+              </a>
+              </ion-nav-buttons>
+      <ion-content ng-controller="listCtrl">
+          <ion-list>
+              <ion-item class="item-remove-animate item-icon-right" href="/#/edit/{{contacto.id}}" ng-repeat="contacto in contactos">
+            <i class="icon ion-ios-arrow-forward"></i>
+              <h2> {{contacto.name}} </h2>
+              <p> {{contacto.observations}} </p>
+                  
+                <ion-option-button class="button-assertive icon-left ion-ios-trash-outline" ng-click="remove(contacto.id)">Eliminar</ion-option-button>
+              </ion-item>
+          </ion-list>
+          <ion-infinite-scroll ng if="moreDataCanBeLoaded()" icon ="ion-loading-c" on-infinite="cargar()" distance="1%">
+                             
+                <ion-infinite-scroll-content
+                    loadingSpinner="bubbles"
+                    loadingText="Cargando más contactos..">
+            </ion-infinite-scroll-content>
+          </ion-infinite-scroll>
+      </ion-content>
+</ion-view>

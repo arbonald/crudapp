@@ -1,0 +1,54 @@
+<ion-view title="Contacto" id="editpage">
+    <ion-nav-buttons  class="has-header">
+        <a class="button button-icon ion-chevron-left" href="/#/home">
+     </a>
+    </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <form id="nuevoContacto-form2" class="list">
+        <label class="item item-input item-stacked-label" id="nuevoContacto-input5" name="name" >Nombre de contacto
+            <span class="input-label"></span>
+                <input type="text" placeholder="Juan Pablo Mesa" ng-model="contacto.name">
+      </label>
+        <label class="item item-input item-stacked-label" id="nuevoContacto-input4" name="identification"> Identificación
+            <span class="input-label"></span>
+                <input type="number" placeholder="CI, RNC, pasaporte, RFC" ng-model="contacto.identification">
+      </label>
+        <label class="item item-input item-stacked-label" id="nuevoContacto-input3" name="email">Email
+            <span class="input-label"></span>
+                <input type="email" placeholder="micorreo@miempresa.com"  ng-model="contacto.email">
+      </label>
+        <label class="item item-input item-stacked-label" id="nuevoContacto-input6" name="phonePrimary"> Número de contacto primario
+            <span class="input-label"></span>
+                <input type="text" placeholder="Numero telefónico principal"  ng-model="contacto.phonePrimary">
+      </label>
+            <label class="item item-input item-stacked-label" id="nuevoContacto-input8" name="phoneSecondary"> Otro número de contacto (Opcional)
+                <span class="input-label"> </span>
+                    <input type="text" placeholder="Número telefónico secundario"  ng-model="contacto.phoneSecondary">
+      </label>
+        <label class="item item-input item-stacked-label" id="nuevoContacto-input7" name="mobile"> Movil
+            <span class="input-label"></span>
+                <input type="text" placeholder="Telefono movil"  ng-model="contacto.mobile">
+      </label>
+        <label class="item item-input item-stacked-label" id="nuevoContacto-input12" name="city">Ciudad
+            <span class="input-label"></span>
+                <input type="text" placeholder="Ciudad" ng-model="contacto.city">
+      </label>
+        <label class="item item-input item-stacked-label" id="nuevoContacto-input11" name="address">Dirección
+            <span class="input-label"></span>
+                <input type="text" placeholder="Dirección" ng-model="contacto.address">
+      </label>
+        <label class="item item-input item-stacked-label" id="nuevoContacto-input11" name="type">Tipo de contacto
+            <span class="input-label" ng-model="contacto.type"></span>
+                <input type="text" placeholder="Proveedor o Cliente" ng-model="contacto.type">
+        </label>
+        <label class="item item-input item-stacked-label" id="nuevoContacto-input9" name="observations">Observaciónes
+            <span class="input-label"></span>
+                <input type="text" placeholder="Observaciones del contacto" ng-model=contacto.observations>
+      </label>
+    </form>
+  </ion-content>
+    <ion-footer-bar>
+    <a class="button icon ion-android-archive" ng-click="save()"> Guardar
+    </a>
+</ion-footer-bar>
+</ion-view>

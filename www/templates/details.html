@@ -1,0 +1,32 @@
+<div ng-controller="DetailsCtrl">
+    <ion-view title="Información de contacto">
+        <ion-nav-buttons  class="has-header">
+            <a class="button button-icon ion-chevron-left" href="/#/home">
+         </a>
+</ion-nav-buttons>
+        <ion-content  padding="true">
+            <div class="card">
+                <div class="item item-divider">
+                    Detalles: {{contacto.name}}
+  </div>
+                <img src="https://cdn2.alegra.com/website/assets/images/feature-usuarios.png">
+                <div class="item item-text-wrap"> Identificación:
+                    {{contacto.identification}}
+</div>
+</div>
+                <div class="item item-text-wrap"> Email:
+                    {{contacto.email}}
+</div>
+                <div class="item item-text-wrap"> Numero de contacto:
+                    {{contacto.phonePrimary}}
+  </div>
+                <div class="item item-text-wrap"> Tipo:
+                    {{contacto.type}}
+  </div>
+                <div class="item item-text-wrap"> Observaciones:
+                    {{contacto.observations}}
+  </div>
+        </ion-content>
+    </ion-view>
+</div>
+

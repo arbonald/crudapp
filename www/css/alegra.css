@@ -1,0 +1,39 @@
+.title {
+    font-family: sans-serif !important;
+    color:aliceblue
+}
+.bar.bar-calm {
+    background-color: cadetblue;
+    border-color: cornsilk;
+}
+
+.bar.bar-calm .title {
+  color: cornsilk;
+}
+
+.button {
+  color: darkcyan;
+}
+h3{
+    font-family: sans-serif !important;
+    color: darkcyan;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    position:relative;
+  }
+  h1{
+
+    font-family: sans-serif !important;
+    color:#38F1CF;
+  }
+  h2{
+    font-family: sans-serif !important;
+    color:darkslategray;
+  }
+span{
+    font-family: sans-serif;
+    text-transform:capitalize;
+    color: darkslategray;
+    float:right; 
+
+  }
+

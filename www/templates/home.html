@@ -1,0 +1,34 @@
+<ion-view title="CONTACTOS" style="background-color: azure">
+  <ion-nav-buttons side="right" class="has-header">
+            <a class="button button-icon icon ion-android-add" href="/#/create">
+              </a>
+            <a class="button button-icon icon ion-edit" href="/#/list" >
+              </a>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header" ng-controller="listCtrl">
+      <div class="bar bar-header item-input-inset">
+  <label class="item-input-wrapper">
+    <i class="icon ion-ios7-search placeholder-icon"></i>
+    <input type="search" placeholder="Buscar contacto" ng-model="searchQuery">
+  </label>
+</div>
+    <ion-refresher 
+            pulling-text="Arrastre para cargar más contactos..."
+            on-refresh="doRefresh()">
+    </ion-refresher>
+    <ion-list id="contactos-list3">
+    <ion-item class="item item-icon-right" href="/#/details/{{contacto.id}}" ng-repeat="contacto in contactos | filter:searchQuery">
+            <i class="icon ion-ios-arrow-forward"></i>
+              <h2> {{contacto.name}}</h2>
+              <p> {{contacto.type}} </p>
+              </ion-item>
+    </ion-list>
+      <ion-infinite-scroll ng if="infiniteScroll()" icon ="ion-loading-c" on-infinite="doInfinit()" distance="1%">           
+          <ion-infinite-scroll-content
+                    loadingSpinner="bubbles"
+                    loadingText="Cargando más contactos..">
+                </ion-infinite-scroll-content>
+     </ion-infinite-scroll>
+            <img src="https://lh3.googleusercontent.com/n1nw_yNkdos0BV9RkUkf-3DZOezy8HAn5c3za1lGL0VafLFedvG8e_f5cIEmrkdHebI=w30">
+  </ion-content>
+</ion-view>
